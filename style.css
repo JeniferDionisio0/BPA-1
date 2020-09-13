@@ -4,11 +4,9 @@
   }
 
 body{
-  background-color: rgb(173, 0, 0)29, 78, 78);
+  background: black;
 }
-
-#main-container {
-  /* width: 200px; */
+.card {
   height: 30px;
   background-color: black;
   /* border-radius: 20px; */
@@ -16,20 +14,17 @@ body{
   margin-top: 100px;
 }
 
-#main-container h1 {
+.card h1 {
   text-align: center;
   margin-bottom: 15px;
   font-size: 50px;
   color: white;
 }
-#main-container h2 {
+.card h2 {
   font-size: 25px;
   color: white; 
 }
-#main-container h3 {
-  font-size: 25px;
-  color: white; 
-}
+
 .button {
   color: aquamarine;
 }
