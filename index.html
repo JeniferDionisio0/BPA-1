@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main-container">
+        <h1>Escolha a sua categoria!</h1><br><br>
+    
+        <!-- <label>Escolha a sua categoria!</label><br/> -->
+        <h2>Detalhe ela abaixo.</h2><br>
+        <select>
+            <!-- <optgroup label="Escolhe sua Profissão" class="Escolhe sua Profissão"> -->
+                <option value="">Escolhe sua Profissão</option>
+            <!-- </optgroup> -->
+            <optgroup label="Assistencia" class="Assistencia Tecnica">
+                <option value="1">Assistencia de Computadores</option>
+                <option value="2">Celular</option>
+                <option value="3">Eletrodomestico</option>
+            </optgroup>
+            <optgroup label="Design e Tecnologia" class="designetecnologia">
+                <option value="1">Criação de Logos</option>
+                <option value="2">Edição de Fotos</option>
+                <option value="3">Desenvolvimento de Sites</option>
+                <option value="4">Edição Gráfica</option>
+            </optgroup>
+            <optgroup label="Eventos" class="Eventos">
+                <option value="1">Animador de Festas</option>
+                <option value="2">Buffet Completo</option>
+                <option value="3">Bandas e Cantores</option>
+            </optgroup>
+            <optgroup label="Saude" class="Saude">
+                <option value="1">Fisioteurapeuta</option>
+                <option value="2">Enfermeira</option>
+                <option value="3">Nutricionista</option>
+            </optgroup>
+            <optgroup label="Outro" class="Outro">
+                <option value=""></option>
+            </optgroup>
+        </select><br><br><br>
+        <form>
+            <h3>Qual seu trabalho:  </h3><br/>
+            <textarea rows = "5" cols = "50" name = "descricao">Descreva seu serviço</textarea>
+        </form><br>
+        <button>Cadastrar</button>
+    </div>
+</body>
+</html>
