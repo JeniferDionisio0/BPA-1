@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    
+</head>
+<body>
+    <div class="container" >
+        <a class="links" id="paracadastro"></a>
+        <a class="links" id="paralogin"></a>
+         
+        
+        <div class="content">   
+          
+
+          <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+          <script>
+            function onSignIn(googleUser) {
+              // Useful data for your client-side scripts:
+              var profile = googleUser.getBasicProfile();
+              console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+              console.log('Full Name: ' + profile.getName());
+              console.log('Given Name: ' + profile.getGivenName());
+              console.log('Family Name: ' + profile.getFamilyName());
+              console.log("Image URL: " + profile.getImageUrl());
+              console.log("Email: " + profile.getEmail());
+
+              // The ID token you need to pass to your backend:
+              var id_token = googleUser.getAuthResponse().id_token;
+              console.log("ID Token: " + id_token);
+            }
+          </script>
+
+
+
+
+            <!--FORMULÁRIO DE LOGIN-->
+            <div id="login">
+                <form method="post" action=""> 
+                <h1>Login</h1> 
+                <p> 
+                    <label for="nome_login">E-mail</label>
+                    <input id="nome_login" name="nome_login" required="required" type="text" placeholder="ex. contato@gmail.com"/>
+                </p>
+                
+                <p> 
+                    <label for="email_login">Senha</label>
+                    <input id="email_login" name="email_login" required="required" type="password" placeholder="ex. senha" /> 
+                </p>
+                <!--                 
+                <p> 
+                    <input type="checkbox" name="manterlogado" id="manterlogado" value="" /> 
+                    <label for="manterlogado">Manter-me logado</label>
+                </p>
+                 -->
+                <p> 
+                    <input type="submit" value="Logar" /> 
+                </p>
+
+                <p class="link">
+                    Ainda não tem conta?
+                    <a href="#paracadastro">Cadastre-se</a>
+                </p>
+
+                </form>
+            </div>
+     
+          <!--FORMULÁRIO DE CADASTRO-->
+          <div id="cadastro">
+            <form method="post" action=""> 
+              <h1>Cadastro</h1> 
+               
+              <p> 
+                <label for="nome_cad">Seu nome</label>
+                <input id="nome_cad" name="nome_cad" required="required" type="text" placeholder="nome" />
+              </p>
+               
+              <p> 
+                <label for="email_cad">Seu e-mail</label>
+                <input id="email_cad" name="email_cad" required="required" type="email" placeholder="contato@gmail.com"/> 
+              </p>
+               
+              <p> 
+                <label for="senha_cad">Sua senha</label>
+                <input id="senha_cad" name="senha_cad" required="required" type="password" placeholder="ex. 1234"/>
+              </p>
+               
+              <p> 
+                <input type="submit" value="Cadastrar"/> 
+              </p>
+               
+              <p class="link">  
+                Já tem conta?
+                <a href="#paralogin"> Ir para Login </a>
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>    
+</body>
+</html>
